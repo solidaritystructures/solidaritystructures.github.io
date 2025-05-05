@@ -4,7 +4,7 @@ import { getFirestore, addDoc, collection } from "https://www.gstatic.com/fireba
 
 const firebaseConfig = {
   apiKey: "AIzaSyBPsK0xs5j7RpA2t8JbC0Wi3xZ2xyuYztQ",
-  authDomain: "solidaritystructures.com",
+  authDomain: "solidarity-structures-3b7d9.firebaseapp.com",
   projectId: "solidarity-structures-3b7d9",
   storageBucket: "solidarity-structures-3b7d9.appspot.com",
   messagingSenderId: "16596536591",
