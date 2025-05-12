@@ -452,39 +452,45 @@ footer {
    📱 Mobile Styles
 ─────────────────────────────── */
 @media (max-width: 768px) {
-  .top-nav {
+  .top-nav,
+  .page-drywall .top-nav {
     flex-direction: column;
     align-items: flex-start;
   }
 
-  .nav-links {
+  .nav-links,
+  .page-drywall .nav-links {
     flex-direction: column;
     width: 100%;
     gap: 10px;
     margin-top: 10px;
   }
 
-  .dropbtn {
+  .dropbtn,
+  .page-drywall .dropbtn {
     width: 100%;
     text-align: left;
   }
 
-  .hero-text {
+  .hero-text,
+  .page-drywall .hero-text {
     padding: 0 10px;
     font-size: 1em;
   }
 
-  .service-grid {
+  .service-grid,
+  .page-drywall .service-grid {
     flex-direction: column;
     align-items: center;
   }
 
-  .service-card {
+  .service-card,
+  .page-drywall .service-card {
     width: 90%;
   }
 
-  .top-logo {
+  .top-logo,
+  .page-drywall .top-logo {
     margin: auto;
   }
 }
-
