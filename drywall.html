@@ -1,37 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Drywall Services | Solidarity Structures LLC</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Solidarity Structures LLC</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>Drywall Repair Services</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="drywall.html">Drywall</a>
-      <a href="fencing.html">Fencing</a>
-      <a href="framing.html">Framing</a>
+  <header class="top-nav">
+    <img src="logo_embedded.svg" alt="Solidarity Structures Logo" class="top-logo" />
+    <nav class="nav-links">
+      <div class="dropdown">
+        <button class="dropbtn">Services ▾</button>
+        <div class="dropdown-content">
+          <a href="drywall.html">Drywall</a>
+          <a href="fencing.html">Fencing</a>
+          <a href="cleaning.html">Site Cleaning</a>
+        </div>
+      </div>
+      <a href="about.html">About Us</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
 
-  <main>
-    <section>
-      <h2>Professional Drywall Patch & Repair</h2>
-      <p>We specialize in fast, clean, and seamless drywall repairs for residential properties. Whether it's a small dent or large hole, we ensure your walls look like new again.</p>
-      <ul>
-        <li>✔️ Holes, cracks, and water damage repairs</li>
-        <li>✔️ Blending texture and paint for a clean finish</li>
-        <li>✔️ Quick service with minimal disruption</li>
-      </ul>
-    </section>
-  </main>
+  
+  <section class="hero">
+    <img src="hero-bg.png" alt="Hero" class="hero-img" />
+    <div class="hero-text">
+      <h2>Rooted in Service, Evolving Through Innovation.</h2>
+      <p>We are committed to providing practical, high-quality services...</p>
+    </div>
+  </section>
 
-  <footer>
-    <p>&copy; 2025 Solidarity Structures LLC. All rights reserved.</p>
-  </footer>
+    <section class="services-section">
+      <h3>Our Services:</h3>
+      <div class="service-grid">
+        <a href="drywall.html" class="service-card">
+          <img src="drywall_icon_true_vector.svg" alt="Drywall" class="icon" />
+          <p>Drywall Patch & Repair</p>
+        </a>
+        <a href="fencing.html" class="service-card">
+          <img src="fencing_icon_true_vector.svg" alt="Fencing" class="icon" />
+          <p>Fence Installation</p>
+        </a>
+        <a href="cleaning.html" class="service-card">
+          <img src="cleaning_icon_vector.svg" alt="Cleaning" class="icon" />
+          <p>Site Cleaning</p>
+        </a>
+      </div>
+    </section>
+    
+
+    <footer>
+      <p>&copy; 2025 Solidarity Structures LLC. All rights reserved.</p>
+    </footer>
+  </div>
 </body>
 </html>
