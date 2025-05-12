@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Request a Drywall Quote | Drywall by Solidarity Structures LLC</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+    (function() {
+      emailjs.init("ggQ8ijE-hyXFkEpia"); // ✅ Replace with your actual public key
+    })();
+  </script>
+</head>
+
+<body class="page-drywall">
+  <!-- Navigation -->
+  <header class="top-nav">
+    <img src="logo_embedded.svg" alt="Solidarity Structures Logo" class="top-logo" />
+    <nav class="nav-links">
+      <a href="index.html">Go to Main Page</a>
+      <a href="contact.html">Contact</a>
+      <a href="drywall_reviews.html">Reviews</a>
+    </nav>
+  </header>
+
+  <!-- Form Section -->
+  <main class="main-content">
+    <section class="services-section">
+      <h2>Request a Quote for Drywall Services</h2>
+      <p>Please fill out the form below. We’ll get back to you shortly.</p>
+      
+      <form id="quote-form" class="quote-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" required />
+
+        <label for="preferredDate">Preferred Date:</label>
+        <input type="date" id="preferredDate" name="preferredDate" required />
+
+        <label for="preferredTime">Preferred Time:</label>
+        <input type="time" id="preferredTime" name="preferredTime" required />
+
+        <label for="image">Upload a Photo (optional):</label>
+        <input type="file" id="image" name="image" accept="image/*" />
+
+        <button type="submit" class="quote-btn">Submit Quote Request</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Drywall by Solidarity Structures LLC. All rights reserved.</p>
+  </footer>
+
+  <!-- JS to handle Firebase and EmailJS submission -->
+  <script type="module" src="quote.js"></script>
+</body>
+</html>
