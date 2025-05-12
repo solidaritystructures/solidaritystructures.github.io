@@ -1,62 +1,449 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  display: flex;
-  min-height: 100vh;
-}
-
-.sidebar {
-  width: 220px;
-  background-color: #2c3e50;
-  color: white;
-  padding: 15px;
-  flex-shrink: 0;
-}
-
-.sidebar h2 {
-  margin-top: 0;
-}
-
-.sidebar a, .dropdown-btn {
-  display: block;
-  color: white;
-  padding: 10px;
-  text-decoration: none;
-  border: none;
-  background: none;
-  text-align: left;
-  cursor: pointer;
-  width: 100%;
-}
-
-.sidebar a:hover, .dropdown-btn:hover {
-  background-color: #34495e;
-}
-
-.dropdown-container {
-  display: none;
-  padding-left: 10px;
-}
-
-.dropdown-container.show {
-  display: block;
-}
-
-.main-content {
-  flex-grow: 1;
-  padding: 20px;
   background-color: #f4f4f4;
 }
 
-header {
-  text-align: center;
-  padding: 20px;
-  background-color: #2c3e50;
-  color: white;
 
+.top-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #18314f;
+  color: white;
+  flex-wrap: wrap;
+}
+
+.top-logo {
+  width: 100px;       /* stretch horizontally */
+  height: auto;       /* maintain aspect ratio */
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-links a,
+.dropbtn {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  background: none;
+  border: none;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.nav-links a:hover,
+.dropbtn:hover {
+  background-color: #2a4b6b;
+  border-radius: 5px;
+}
+
+.quote-btn {
+  background-color: #fca311;
+  color: black;
+  border-radius: 5px;
+}
+
+.quote-btn:hover {
+  background-color: #ffb94d;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #2a4b6b;
+  min-width: 160px;
+  z-index: 1;
+  top: 40px;
+}
+
+.dropdown-content a {
+  display: block;
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  background-color: #3b5870;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.top-logo {
+  height: auto;
+  width: auto;
+  max-height: 100px;
+}
+.service-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  background: #f4f4f4;
+  padding: 20px;
+  border-radius: 12px;
+  width: 180px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  background-color: #e8f0f5;
+}
+
+.service-card .icon {
+  width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  margin: 0;
+  color: #18314f;
+  font-weight: 500;
+  text-align: center;
 }
 
 header h1 {
   margin: 0;
   font-size: 2em;
+}
+
+.services-section {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.services-section h3 {
+  font-size: 1.8em;
+  color: #18314f;
+  margin-bottom: 20px;
+}
+
+.hero {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.hero-img {
+  width: 100%;
+  max-height: 550px;
+  object-fit: cover;
+  object-position: 100% 10%;
+  display: block;
+}
+
+
+.hero-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(24, 49, 79, 0.6); /* adjustable darkness */
+  z-index: 1;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  font-size: 1.5em; /* or try 2em, 24px, etc. */
+  text-align: center; /* helpful for multi-line content */
+  
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #18314f;
+  color: white;
+  font-size: 0.9em;
+}
+
+/* ─────────────────────────────────────────────
+   🔨 Start of Drywall Page Styles (page-drywall)
+────────────────────────────────────────────── */
+
+.page-drywall {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+}
+
+.page-drywall .top-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #18314f;
+  color: white;
+  flex-wrap: wrap;
+}
+
+.page-drywall .top-logo {
+  width: 100px;
+  height: auto;
+  max-height: 100px;
+}
+
+.page-drywall .nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.page-drywall .nav-links a,
+.page-drywall .dropbtn {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  background: none;
+  border: none;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.page-drywall .nav-links a:hover,
+.page-drywall .dropbtn:hover {
+  background-color: #2a4b6b;
+  border-radius: 5px;
+}
+
+.page-drywall .quote-btn {
+  background-color: #fca311;
+  color: black;
+  border-radius: 5px;
+}
+
+.page-drywall .quote-btn:hover {
+  background-color: #ffb94d;
+}
+
+.page-drywall .dropdown {
+  position: relative;
+}
+
+.page-drywall .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #2a4b6b;
+  min-width: 160px;
+  z-index: 1;
+  top: 40px;
+}
+
+.page-drywall .dropdown-content a {
+  display: block;
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+}
+
+.page-drywall .dropdown-content a:hover {
+  background-color: #3b5870;
+}
+
+.page-drywall .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.page-drywall .service-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.page-drywall .service-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  background: #f4f4f4;
+  padding: 20px;
+  border-radius: 12px;
+  width: 180px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.page-drywall .service-card:hover {
+  transform: translateY(-5px);
+  background-color: #e8f0f5;
+}
+
+.page-drywall .service-card .icon {
+  width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.page-drywall .service-card p {
+  margin: 0;
+  color: #18314f;
+  font-weight: 500;
+  text-align: center;
+}
+
+.page-drywall header h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+.page-drywall .services-section {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.page-drywall .services-section h3 {
+  font-size: 1.8em;
+  color: #18314f;
+  margin-bottom: 20px;
+}
+
+.page-drywall .hero {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.page-drywall .hero-img {
+  width: 100%;
+  max-height: 550px;
+  object-fit: cover;
+  object-position: 100% 10%;
+  display: block;
+}
+
+.page-drywall .hero-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(24, 49, 79, 0.6);
+  z-index: 1;
+}
+
+.page-drywall .hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.page-drywall footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #18314f;
+  color: white;
+  font-size: 0.9em;
+}
+
+/* ─────────────────────────────────────────────
+   🧾 Start of Drywall Quote Page Styles
+────────────────────────────────────────────── */
+.page-drywall-quote .main-content {
+  padding: 20px;
+}
+
+.page-drywall-quote .services-section {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.page-drywall-quote .services-section h2 {
+  font-size: 1.8em;
+  color: #18314f;
+  margin-bottom: 10px;
+}
+
+.page-drywall-quote .quote-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.page-drywall-quote .quote-form label {
+  font-weight: bold;
+  color: #18314f;
+  text-align: left;
+}
+
+.page-drywall-quote .quote-form input[type="text"],
+.page-drywall-quote .quote-form input[type="email"],
+.page-drywall-quote .quote-form input[type="date"],
+.page-drywall-quote .quote-form input[type="time"],
+.page-drywall-quote .quote-form input[type="file"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+  width: 100%;
+}
+
+.page-drywall-quote .quote-form button {
+  padding: 12px;
+  background-color: #fca311;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.page-drywall-quote .quote-form button:hover {
+  background-color: #ffb94d;
+}
+
+.page-drywall .checklist {
+  list-style: none;
+  padding: 0;
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+.page-drywall .checklist li {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* space between checkmark and text */
+  font-size: 1em;
+  color: #18314f;
+  margin-bottom: 10px;
+}
+
+.page-drywall .checklist li::before {
+  content: "✔";
+  color: #18314f;
+  font-weight: bold;
+  font-size: 1.1em;
+  line-height: 1;
 }
