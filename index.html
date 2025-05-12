@@ -1,89 +1,59 @@
-
 <!DOCTYPE html>
-<!-- This tells the browser you're using HTML5 -->
 <html lang="en">
 <head>
-  <!-- Metadata about your website -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Solidarity Structures LLC</title>
-  <!-- Link to the external CSS file that styles the site -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Sidebar on the left side with navigation -->
-  <div class="sidebar">
-    <!-- This is a button that toggles visibility of the Services menu -->
-    <button class="dropdown-btn">Services ▾</button>
+  <header class="top-nav">
+    <img src="logo_embedded.svg" alt="Solidarity Structures Logo" class="top-logo" />
+    <nav class="nav-links">
+      <div class="dropdown">
+        <button class="dropbtn">Services ▾</button>
+        <div class="dropdown-content">
+          <a href="drywall.html">Drywall</a>
+          <a href="fencing.html">Fencing</a>
+          <a href="cleaning.html">Site Cleaning</a>
+        </div>
+      </div>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-    <!-- Services list is hidden by default, shown when the button above is clicked -->
-    <div class="dropdown-container">
-      <a href="drywall.html">Drywall</a>
-      <a href="fencing.html">Fencing</a>
+  
+  <section class="hero">
+    <img src="hero-bg.png" alt="Hero" class="hero-img" />
+    <div class="hero-text">
+      <h2>Rooted in Service, Evolving Through Innovation.</h2>
+      <p>We are committed to providing practical, high-quality services...</p>
     </div>
+  </section>
 
-    <!-- A link to your contact page -->
-    <a href="contact.html">Contact</a>
-
-    <a href="reviews.html">Reviews</a>
-  </div>
-
-  <!-- Main content area on the right side -->
-  <div class="main-content">
-
-    <!-- Header at the top of the content area -->
-    <header>
-      <h1>Solidarity Structures LLC</h1>
-
-      <!-- Basic navigation bar with direct links -->
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </header>
-
-    <!-- Hero section with your company slogan -->
-    <section class="hero">
-      <h2>Building With Purpose, Repairing With Care</h2>
-      <p>
-        At Solidarity Structures LLC, our mission is to provide high-quality construction and repair services
-        rooted in integrity, professionalism, and long-term value.
-      </p>
+    <section class="services-section">
+      <h3>Our Services:</h3>
+      <div class="service-grid">
+        <a href="drywall.html" class="service-card">
+          <img src="drywall_icon_true_vector.svg" alt="Drywall" class="icon" />
+          <p>Drywall Patch & Repair</p>
+        </a>
+        <a href="fencing.html" class="service-card">
+          <img src="fencing_icon_true_vector.svg" alt="Fencing" class="icon" />
+          <p>Fence Installation</p>
+        </a>
+        <a href="cleaning.html" class="service-card">
+          <img src="cleaning_icon_vector.svg" alt="Cleaning" class="icon" />
+          <p>Site Cleaning</p>
+        </a>
+      </div>
     </section>
+    
 
-    <!-- Section listing services with links -->
-    <section>
-      <h3>Our Services</h3>
-      <ul>
-        <li><a href="drywall.html">Drywall Patch & Repair</a></li>
-        <li><a href="fencing.html">Fence Installation</a></li>
-      </ul>
-    </section>
-
-    <!-- Section with contact information -->
-    <section id="contact">
-      <h3>Contact Us</h3>
-      <p>Email: <a href="mailto:solidaritystructures@gmail.com">solidaritystructures@gmail.com</a></p>
-    </section>
-
-    <!-- Footer at the very bottom of the page -->
     <footer>
       <p>&copy; 2025 Solidarity Structures LLC. All rights reserved.</p>
     </footer>
   </div>
-
-  <!-- Small script that enables dropdown functionality when "Services" is clicked -->
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const dropdownBtn = document.querySelector('.dropdown-btn');
-    const dropdown = document.querySelector('.dropdown-container');
-
-    dropdownBtn.addEventListener('click', () => {
-      dropdown.classList.toggle('show'); // toggles visibility of the services menu
-    });
-  });
-</script>
-
-  
 </body>
 </html>
