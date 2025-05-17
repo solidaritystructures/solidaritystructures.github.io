@@ -5,7 +5,7 @@ import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstati
 // 🔐 Replace with your actual Firebase config:
 const firebaseConfig = {
   apiKey: "AIzaSyBPsK0xs5j7RpA2t8JbC0Wi3xZ2xyuYztQ",
-  authDomain: "solidaritystructures.com",
+  authDomain: "solidarity-structures-3b7d9.firebaseapp.com",
   projectId: "solidarity-structures-3b7d9",
   storageBucket: "solidarity-structures-3b7d9.firebasestorage.app",
   messagingSenderId: "16596536591",
