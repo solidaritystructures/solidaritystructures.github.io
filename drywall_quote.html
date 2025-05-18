@@ -7,10 +7,12 @@
   <link rel="stylesheet" href="style.css" />
 
   <!-- EmailJS SDK -->
-  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-  <script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript">
     (function() {
-      emailjs.init("ggQ8ijE-hyXFkEpia"); // ✅ Replace with your actual public key
+      emailjs.init({publicKey: "ggQ8ijE-hyXFkEpia",
+
+      }); // ✅ Replace with your actual public key
     })();
   </script>
 </head>
@@ -62,6 +64,6 @@
   </footer>
 
   <!-- JS to handle Firebase and EmailJS submission -->
-  <script type="module" src="drywall_quotes.js"></script>
+  <script type="module" src="drywall_quote.js"></script>
 </body>
 </html>
