@@ -45,7 +45,14 @@ document.getElementById("quote-form").addEventListener("submit", async (e) => {
       preferredDate,
       preferredTime,
       imageUrl,
-      submittedAt: serverTimestamp()
+      submittedAt: serverTimestamp(),
+      // Internal fields:
+      status: "Submitted",            // initial workflow status
+      adminNotes: "",                 // leave empty for now
+      scheduledDate: "",              // to be filled by admin later
+      scheduledTime: "",              // same
+      paymentStatus: "Pending"        // default
+
     });
 
     // 📧 Send confirmation email
