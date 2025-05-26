@@ -64,7 +64,7 @@ async function loadQuotes() {
   const quoteList = document.getElementById("quote-list");
   quoteList.innerHTML = "Loading...";
 
-  const querySnapshot = await getDocs(collection(db, "drywall_quotes"));
+  const querySnapshot = await getDocs(collection(db, "drywall quotes"));
   quoteList.innerHTML = "";
 
   querySnapshot.forEach((docSnap) => {
