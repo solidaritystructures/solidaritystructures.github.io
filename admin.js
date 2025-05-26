@@ -1,9 +1,19 @@
 // admin.js
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
 import { getFirestore, collection, getDocs, updateDoc, doc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
-import { getAuth, signOut } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
 
 const auth = getAuth();
+
+onAuthStateChanged(auth, (user) => {
+  if (user) {
+    // User is signed in, proceed to load quotes
+    loadQuotes();
+  } else {
+    // No user is signed in, redirect to login page
+    window.location.href = "login.html";
+  }
+});
 
 document.getElementById("logout-btn").addEventListener("click", () => {
   signOut(auth)
