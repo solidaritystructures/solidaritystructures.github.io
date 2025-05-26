@@ -1,19 +1,20 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
-import { getFirestore, addDoc, collection, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
-import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-storage.js";
+// quoteForm.js
 
-// 🔐 Replace with your actual Firebase config:
-const firebaseConfig = {
-  apiKey: "AIzaSyBPsK0xs5j7RpA2t8JbC0Wi3xZ2xyuYztQ",
-  authDomain: "solidarity-structures-3b7d9.firebaseapp.com",
-  projectId: "solidarity-structures-3b7d9",
-  storageBucket: "solidarity-structures-3b7d9.appspot.com"
-,
-  messagingSenderId: "16596536591",
-  appId: "1:16596536591:web:15612e3d701fb695c6827a"
-};
+import app from './firebaseConfig.js';
+import {
+  getFirestore,
+  addDoc,
+  collection,
+  serverTimestamp
+} from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+import {
+  getStorage,
+  ref,
+  uploadBytes,
+  getDownloadURL
+} from "https://www.gstatic.com/firebasejs/10.12.0/firebase-storage.js";
 
-const app = initializeApp(firebaseConfig);
+// Initialize Firestore and Storage using the shared app instance
 const db = getFirestore(app);
 const storage = getStorage(app);
 
@@ -30,14 +31,14 @@ document.getElementById("quote-form").addEventListener("submit", async (e) => {
   let imageUrl = "";
 
   try {
-    // 🔼 Upload image if provided
+    // Upload image if provided
     if (imageFile) {
       const storageRef = ref(storage, `quoteImages/${Date.now()}_${imageFile.name}`);
       await uploadBytes(storageRef, imageFile);
       imageUrl = await getDownloadURL(storageRef);
     }
 
-    // 🗂 Save data to Firestore
+    // Save data to Firestore
     await addDoc(collection(db, "drywall quotes"), {
       name,
       email,
@@ -46,16 +47,14 @@ document.getElementById("quote-form").addEventListener("submit", async (e) => {
       preferredTime,
       imageUrl,
       submittedAt: serverTimestamp(),
-      // Internal fields:
-      status: "Submitted",            // initial workflow status
-      adminNotes: "",                 // leave empty for now
-      scheduledDate: "",              // to be filled by admin later
-      scheduledTime: "",              // same
-      paymentStatus: "Pending"        // default
-
+      status: "Submitted",
+      adminNotes: "",
+      scheduledDate: "",
+      scheduledTime: "",
+      paymentStatus: "Pending"
     });
 
-    // 📧 Send confirmation email
+    // Send confirmation email using EmailJS
     emailjs.send("Yservice_12xanlm", "Ytemplate_6zhsxmc", {
       name,
       email,

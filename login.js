@@ -1,6 +1,6 @@
 // login.js
 
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+import app from './firebaseConfig.js';
 import {
   getAuth,
   signInWithEmailAndPassword,
@@ -9,25 +9,13 @@ import {
   browserLocalPersistence
 } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
 
-// Firebase configuration
-const firebaseConfig = {
-  apiKey: "AIzaSyBPsK0xs5j7RpA2t8JbC0Wi3xZ2xyuYztQ",
-  authDomain: "solidarity-structures-3b7d9.firebaseapp.com",
-  projectId: "solidarity-structures-3b7d9",
-  storageBucket: "solidarity-structures-3b7d9.appspot.com",
-  messagingSenderId: "16596536591",
-  appId: "1:16596536591:web:15612e3d701fb695c6827a"
-};
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
+// Initialize Firebase Authentication
 const auth = getAuth(app);
 
 // Set authentication persistence to local
-setPersistence(auth, browserLocalPersistence)
-  .catch((error) => {
-    console.error("Error setting persistence:", error);
-  });
+setPersistence(auth, browserLocalPersistence).catch((error) => {
+  console.error("Error setting persistence:", error);
+});
 
 // Reference to the login form
 const loginForm = document.getElementById("login-form");
